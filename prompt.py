@@ -3,6 +3,7 @@
 from collections import defaultdict
 from subprocess import Popen, PIPE, DEVNULL
 
+
 def without(input, char):
     return [x for x in input if x != char]
 
