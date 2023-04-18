@@ -122,12 +122,8 @@ if __name__ == '__main__':
         if status_line != "":
             prompt_parts.append(status_line)
 
-
-
         if stashes > 0:
             prompt_parts.append(f"\x1b[0;37m{stashes}\u2691")
 
         prompt = " \x1b[0m| ".join(prompt_parts) + "\x1b[0m]"
-
-
         print(prompt)
