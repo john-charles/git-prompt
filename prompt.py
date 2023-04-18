@@ -116,7 +116,7 @@ if __name__ == '__main__':
         status_line = build_status_lines(get_status())
 
         prompt_parts = [
-            f"[\x1b[0;35m{current_branch} \x1b[0m|"
+            f"[\x1b[0;35m{current_branch}"
         ]
 
         if status_line != "":
@@ -125,7 +125,7 @@ if __name__ == '__main__':
         if stashes > 0:
             prompt_parts.append(f"\x1b[0;37m{stashes}\u2691")
 
-        prompt = " ".join(prompt_parts) + "\x1b[0m]"
+        prompt = " \x1b[0m| ".join(prompt_parts) + "\x1b[0m]"
 
 
         print(prompt)
